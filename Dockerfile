@@ -10,7 +10,8 @@ ENV JAVA_HOME /usr/lib/jvm/java
 ENV KARAF_HOME /opt/karaf/latest
 ADD apache-karaf-4.0.5.tar.gz /opt/karaf
 RUN ln -s /opt/karaf/apache-karaf-4.0.5 /opt/karaf/latest
-ADD config/* /opt/karaf/latest/etc
+ADD config/* /opt/karaf/latest/etc/
+ADD extra/* /opt/karaf/latest/system/
 RUN chown -R karaf /opt/karaf
 USER karaf
 EXPOSE 8181 1099 8101 5005
