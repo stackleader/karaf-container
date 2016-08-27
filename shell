@@ -1,4 +1,4 @@
 #!/bin/bash
 echo "Starting Karaf shell";
 sed -i 's/log4j\.rootLogger=INFO, stdout/log4j\.rootLogger=INFO, out/g' latest/etc/org.ops4j.pax.logging.cfg
-latest/bin/karaf clean
+latest/bin/karaf clean debug
